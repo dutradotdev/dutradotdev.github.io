@@ -10,7 +10,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/trianglify/1.1.0/trianglify.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
     crossorigin="anonymous"></script>
-  <script src="js/script.js">
+  <script src="js/script.js"></script>
   </script>
   <!--Let browser know website is optimized for mobile-->
   <script src="https://unpkg.com/ityped@0.0.5"></script>
@@ -30,8 +30,8 @@
           <a href="#" class="brand-logo menu-text-logo">
             <i class="large material-icons">fingerprint</i> whoami</a>
           <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li>
-              <a class="menu-text" href="#about-me">About me</a>
+            <li id="href_about_me">
+              <a class="menu-text">About me</a>
             </li>
             <li>
               <a class="menu-text" href="#github">GitHub</a>
@@ -48,7 +48,7 @@
       <div class="my-desc">
         <h2 class="index-text">Lucas Dutra.</h2>
         <h4 class="index-text">FullStack Web Developer.</h4>
-        <h5 class="index-text-ityped">a young man who loves
+        <h5 class="index-text-ityped">A young man who loves
           <span id="ityped" class="index-text-ityped ityped"></span>
         </h5>
       </div>
@@ -102,15 +102,12 @@
       loop: true
     });
     
-    (function(){
-      window.addEventListener('scroll', destacaMenu);
-       let $menu = document.querySelector('.my-nav')
-       let $links = $menu.querySelectorAll('li a')
-      
-        function destacaMenu(){
-          
-        }
-    })()
+  
+    let aboutMe = document.querySelector('#href_about_me');
+    aboutMe.addEventListener('click', (e) => {
+      document.getElementById("about-me").scrollIntoView()
+      document.getElementById("about-me").scrollTop += 1000
+    })
   </script>
   <!--Import jQuery before materialize.js-->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
