@@ -2,7 +2,7 @@
   'use strict';
   win.addEventListener('load', carregamentoSuave, false);
   function carregamentoSuave(){
-    $(doc).ready(() => {
+    $(document).ready(() => {
       $("body").fadeIn(1000);
     });
   }

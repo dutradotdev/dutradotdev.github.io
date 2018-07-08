@@ -3,7 +3,7 @@ body {
 }
 
 .section-intro {
-    background: url('../img/background.png') no-repeat center center fixed;
+    background: url('../img/background.png') no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -84,8 +84,11 @@ body {
 .about{
     padding-top: 8%;
     background-color: #f1f2f6;
+    padding-bottom: 46%;
     min-height: 100% !important;;
     min-width: 100% !important;
+    height: 100vh !important;
+    width: 100vh !important;
 }
 
 .img-me{

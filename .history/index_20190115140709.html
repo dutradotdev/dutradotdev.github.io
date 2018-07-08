@@ -11,8 +11,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 
-<body>
-  <section class="section-intro" id="welcome-section">
+<body onload="javascript:carregamentoSuave();">
+  <section class="section-intro">
     <div class="navbar-fixed">
       <nav class="transparent z-depth-0 my-nav">
         <div class="nav-wrapper">
@@ -35,7 +35,7 @@
     <div class="container">
       <div class="transparent z-depth-0 my-box"></div>
       <div class="my-desc">
-        <h1 class="index-text">Lucas Dutra.</h1>
+        <h2 class="index-text">Lucas Dutra.</h2>
         <h4 class="index-text">FullStack Web Developer.</h4>
         <h5 class="index-text-ityped">A young man who loves
           <span id="ityped" class="index-text-ityped ityped"></span>
@@ -79,17 +79,14 @@
                 <div class="chip z-depth-1 hoverable">
                   <img src="img/email.png" alt="E-mail">dtrxxl@outlook.com</div>
               </a>
-            </div>
+            </div>          
         </div>
       </div>
     </div>
   </section>
-  <section id="projects">
-    <div class="container">
-      <h1 class="project-tile">Teste</h1>
-      <a href="https://github.com/lucasdutra13/lucasdutra13.github.io" target="_blank">link to project</a>
-    </div>
-  </section>
+  <script>
+
+  </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/trianglify/1.1.0/trianglify.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
     crossorigin="anonymous"></script>
@@ -99,14 +96,13 @@
     $(document).ready(function () {
       $('.parallax').parallax(); //parallax
     });
-
     ityped.init('#ityped', {
       strings: ['Javascript (ES5, ES6, ES7)', ' NodeJS', 'SQL/NoSQL', 'Watson APIs', 'Linux', 'Open-source', 'to learn'],
       startDelay: 1000,
       loop: true
     });
-
-
+    
+  
     let aboutMe = document.querySelector('#href_about_me');
     aboutMe.addEventListener('click', (e) => {
       document.getElementById("about-me").scrollIntoView()

@@ -84,6 +84,7 @@ body {
 .about{
     padding-top: 8%;
     background-color: #f1f2f6;
+    padding-bottom: 46%;
     min-height: 100% !important;;
     min-width: 100% !important;
 }
