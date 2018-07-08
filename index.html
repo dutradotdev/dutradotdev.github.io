@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--Import materialize.css-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/trianglify/1.1.0/trianglify.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+  <script src="js/script.js">
+  </script>
+  <!--Let browser know website is optimized for mobile-->
+  <script src="https://unpkg.com/ityped@0.0.5"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script>
+    $(document).ready(function () {
+      $('.parallax').parallax(); //parallax
+    });
+  </script>
+</head>
+
+<body onload="javascript:carregamentoSuave();">
+  <section class="section-intro">
+    <div class="navbar-fixed">
+      <nav class="transparent z-depth-0 my-nav">
+        <div class="nav-wrapper">
+          <a href="#" class="brand-logo menu-text-logo">
+            <i class="large material-icons">fingerprint</i> whoami</a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li>
+              <a class="menu-text" href="#about-me">About me</a>
+            </li>
+            <li>
+              <a class="menu-text" href="#github">GitHub</a>
+            </li>
+            <li>
+              <a class="menu-text" href="#javascript">JavaScript</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div class="container">
+      <div class="transparent z-depth-0 my-box"></div>
+      <div class="my-desc">
+        <h2 class="index-text">Lucas Dutra.</h2>
+        <h4 class="index-text">FullStack Web Developer.</h4>
+        <h5 class="index-text-ityped">a young man who loves
+          <span id="ityped" class="index-text-ityped ityped"></span>
+        </h5>
+      </div>
+    </div>
+  </section>
+  <section class="about" style="background-color:	rgba(224,224,224,0.3);" id="about-me">
+    <div class="container">
+      <div class="row">
+        <div class="col s4">
+          <img src="img/me.jpg" class="responsive-img img-me" />
+        </div>
+        <div class="col s8 about-me-text-box">
+          <p class="about-me-text">Hello! my name is Lucas Muniz Dutra, I was born in August 1997. Currently, I live in Brazil and I study Engineering
+            Computation on FIAP. I worked on a multinational company of marketing as developer to big clients like: Natura
+            and Drogaria São Paulo. Nowadays, I am a FullStack Developer focus on JavaScript. I love every layer of web development
+            that involves this language in frontend, backend or even on database.
+          </p>
+          <p class="about-me-text">
+            My skills are: NodeJS, JavaScript(ES5, ES6, ES7), SQL, HTML5, CSS3, MongoDB, Java, GIT and Linux. and every day I want to
+            improve my code and learn more things. What I don't know I learn very fast.
+          </p>
+          <p class="about-me-text">
+            If you want to make a project, or even to know me, send-me an e-mail: dtrxxl@outlook.com or contact me on my social medias.
+          </p>
+          <div class="row center midias hide-on-small-only">
+              <a target="_blank" href="https://www.facebook.com/lucasdutra230897">
+                <div class="chip z-depth-1 hoverable">
+                  <img src="img/Facebook.png" alt="Perfil do Facebook">Facebook</div>
+              </a>
+              <a target="_blank" href="www.linkedin.com/in/lucas-dutra-745817b8">
+                <div class="chip z-depth-1 hoverable">
+                  <img src="img/Linked-in.png" alt="Perfil do Linkedin">Linkedin</div>
+              </a>
+              <a target="_blank" href="https://github.com/lucasdutra13">
+                <div class="chip z-depth-1 hoverable">
+                  <img src="img/Github.png" alt="GitHub">GitHub</div>
+              </a>
+              <a target="_blank" href="mailto:dtrxxl@outlook.com">
+                <div class="chip z-depth-1 hoverable">
+                  <img src="img/email.png" alt="E-mail">dtrxxl@outlook.com</div>
+              </a>
+            </div>          
+        </div>
+      </div>
+    </div>
+  </section>
+  <script>
+    ityped.init('#ityped', {
+      strings: ['Javascript.', 'Java.', 'NodeJS.', 'Coffee.', 'Linux <3.', 'to learn.'],
+      startDelay: 1000,
+      loop: true
+    });
+    
+    (function(){
+      window.addEventListener('scroll', destacaMenu);
+       let $menu = document.querySelector('.my-nav')
+       let $links = $menu.querySelectorAll('li a')
+      
+        function destacaMenu(){
+          
+        }
+    })()
+  </script>
+  <!--Import jQuery before materialize.js-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+</body>
+
+</html>
