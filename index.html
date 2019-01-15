@@ -67,7 +67,7 @@
                 <div class="chip z-depth-1 hoverable">
                   <img src="img/Facebook.png" alt="Perfil do Facebook">Facebook</div>
               </a>
-              <a target="_blank" href="www.linkedin.com/in/lucas-dutra-745817b8">
+              <a target="_blank" href="https://www.linkedin.com/in/lucas-dutra-745817b8">
                 <div class="chip z-depth-1 hoverable">
                   <img src="img/Linked-in.png" alt="Perfil do Linkedin">Linkedin</div>
               </a>
@@ -78,6 +78,10 @@
               <a target="_blank" href="mailto:dtrxxl@outlook.com">
                 <div class="chip z-depth-1 hoverable">
                   <img src="img/email.png" alt="E-mail">dtrxxl@outlook.com</div>
+              </a>
+              <a target="_blank" href="https://twitter.com/dutral_">
+                <div class="chip z-depth-1 hoverable">
+                  <img src="img/twitter.png" alt="twitter">dutral_</div>
               </a>
             </div>
         </div>
@@ -93,25 +97,27 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/trianglify/1.1.0/trianglify.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
     crossorigin="anonymous"></script>
-  <script src="js/script.js"></script>
-  <script src="https://unpkg.com/ityped@0.0.5"></script>
+  <script src="js/script.js" type="text/javascript"></script>
+  <script src="https://unpkg.com/ityped@1.0.3"></script>
   <script>
-    $(document).ready(function () {
-      $('.parallax').parallax(); //parallax
-    });
+    (function(){
+      'use strict';
+        $(document).ready(function () {
+          $('.parallax').parallax(); //parallax
+        });
 
-    ityped.init('#ityped', {
-      strings: ['Javascript (ES5, ES6, ES7)', ' NodeJS', 'SQL/NoSQL', 'Watson APIs', 'Linux', 'Open-source', 'to learn'],
-      startDelay: 1000,
-      loop: true
-    });
+        ityped.init('#ityped', {
+          strings: ['Javascript (ES5, ES6, ES7)', ' NodeJS', 'SQL/NoSQL', 'Watson APIs', 'Linux', 'Open-source', 'to learn'],
+          startDelay: 1000,
+          loop: true
+        });
 
-
-    let aboutMe = document.querySelector('#href_about_me');
-    aboutMe.addEventListener('click', (e) => {
-      document.getElementById("about-me").scrollIntoView()
-      document.getElementById("about-me").scrollTop += 1000
-    })
+        let aboutMe = document.querySelector('#href_about_me');
+        aboutMe.addEventListener('click', (e) => {
+          document.getElementById("about-me").scrollIntoView()
+          document.getElementById("about-me").scrollTop += 1000
+        });
+    }());
   </script>
   <!--Import jQuery before materialize.js-->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
