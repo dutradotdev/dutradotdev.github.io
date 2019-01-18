@@ -7,120 +7,102 @@
   <!--Import materialize.css-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
   <link rel="stylesheet" href="css/style.css">
-  <!--Let browser know website is optimized for mobile-->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+  <link rel="icon"
+      type="image/png"
+      href="img/ico.png">
+  <!--Let browser know website is optimized for mobile  animated bounceInLeft  animated bounceInRight-->
+  <meta name="viewport" content="width=837, user-scalable=no" />\
+  <meta name="theme-color" content="#335078">
+
+  <title> Lucas Dutra</title>
 </head>
 
 <body>
-  <section class="section-intro" id="welcome-section">
-    <div class="navbar-fixed">
-      <nav class="transparent z-depth-0 my-nav">
-        <div class="nav-wrapper">
-          <a href="#" class="brand-logo menu-text-logo">
-            <i class="large material-icons">fingerprint</i> whoami</a>
-          <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li id="href_about_me">
-              <a class="menu-text">About me</a>
-            </li>
-            <li>
-              <a class="menu-text" href="#github">GitHub</a>
-            </li>
-            <li>
-              <a class="menu-text" href="#javascript">JavaScript</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-    </div>
-    <div class="container">
-      <div class="transparent z-depth-0 my-box"></div>
-      <div class="my-desc">
-        <h1 class="index-text">Lucas Dutra.</h1>
-        <h4 class="index-text">FullStack Web Developer.</h4>
-        <h5 class="index-text-ityped">A young man who loves
-          <span id="ityped" class="index-text-ityped ityped"></span>
-        </h5>
-      </div>
-    </div>
-  </section>
-  <section class="about" id="about-me">
-    <div class="container">
-      <div class="row">
-        <div class="col s4">
-          <img src="img/me.jpg" class="responsive-img img-me" />
-        </div>
-        <div class="col s8 about-me-text-box">
-          <p class="about-me-text">Hello! My name is Lucas Muniz Dutra and I have 20 years old. Currently, I live in Brazil and I study Engineering
-            Computation on FIAP. I worked on a multinational company of marketing as developer to big clients like: Natura
-            and Drogaria São Paulo. Nowadays, I'm a FullStack Developer intern on IBM Brazil with focus on Backend with Nodejs and Cloudant(CouchDB). I love every layer of web development
-            that involves this JavaScript in frontend, backend or even on database.
-          </p>
-          <p class="about-me-text">
-            My skills are: NodeJS, JavaScript(ES5, ES6, ES7), SQL, HTML5, CSS3, NoSQL(Cloudant, CouchDB, MongoDB), Java, GIT and Linux. Every day I want to
-            improve my code and learn more things. What I don't know I learn very fast.
-          </p>
-          <p class="about-me-text">
-            If you want to make a project, or even to know me, send-me an e-mail: dtrxxl@outlook.com or contact me on my social medias.
-          </p>
-          <div class="row center midias hide-on-small-only">
-              <a target="_blank" href="https://www.facebook.com/lucasdutra230897">
-                <div class="chip z-depth-1 hoverable">
-                  <img src="img/Facebook.png" alt="Perfil do Facebook">Facebook</div>
-              </a>
-              <a target="_blank" href="https://www.linkedin.com/in/lucas-dutra-745817b8">
-                <div class="chip z-depth-1 hoverable">
-                  <img src="img/Linked-in.png" alt="Perfil do Linkedin">Linkedin</div>
-              </a>
-              <a target="_blank" href="https://github.com/lucasdutra13">
-                <div class="chip z-depth-1 hoverable">
-                  <img src="img/Github.png" alt="GitHub">GitHub</div>
-              </a>
-              <a target="_blank" href="mailto:dtrxxl@outlook.com">
-                <div class="chip z-depth-1 hoverable">
-                  <img src="img/email.png" alt="E-mail">dtrxxl@outlook.com</div>
-              </a>
-              <a target="_blank" href="https://twitter.com/dutral_">
-                <div class="chip z-depth-1 hoverable">
-                  <img src="img/twitter.png" alt="twitter">dutral_</div>
-              </a>
+  <div class="container">
+    <div class="row full-content">
+      <section class="section-intro" id="welcome-section">
+        <div class="container section-intro-container animated bounceInDown">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="my-desc">
+                <h1 class="index-text">Lucas Dutra.</h1>
+                <h4 class="index-text">FullStack Web Developer.</h4>
+                <h5 class="index-text-ityped">A young man who loves
+                  <span id="ityped" class="index-text-ityped ityped"></span>
+                </h5>
+              </div>
+              <div class="buttons-options">
+                <button class="btn-who-i-am">Who am I</button>
+                <button class="btn-projects">Projects</button>
+              </div>
             </div>
+          </div>
         </div>
-      </div>
+      </section>
+      <section class="about section-about displayNone" id="about-me">
+        <div class="container section-about-container animated bounceInUp">
+          <div class="row">
+            <div class="col s4">
+              <img src="img/me.jpg" class="responsive-img img-me" />
+            </div>
+            <div class="col s8 about-me-text-box">
+              <p class="about-me-text">Hello! My name is Lucas Muniz Dutra and I have 21 years old. Currently, I live in Brazil and I study Engineering
+                Computation on FIAP. Nowadays, I'm a FullStack Developer intern on IBM Brazil working with Node.js, Cloudant, Watson APIs and React/React Native.
+                I love every layer of web development that involves JavaScript be in frontend, backend or even on database.
+              </p>
+              <p class="about-me-text">
+                I have knowledge with HTML5, CSS3, JavaScript(ES5, ES6, ES7), React, React Native, Node.js, Java, SQL/NoSQL(Cloudant, MongoDB), GIT and Linux.
+                Every day I want to improve my code and learn more things.
+                What I don't know I learn very fast.
+              </p>
+              <p class="about-me-text">
+                If you want to make a project, or even to know me, send-me an e-mail: dtrxxl@outlook.com or contact me on my social medias.
+              </p>
+              <div class="row center midias">
+                  <a target="_blank" href="https://www.linkedin.com/in/lucas-dutra-745817b8">
+                    <div class="chip z-depth-1 hoverable">
+                      <img src="img/Linked-in.png" alt="Perfil do Linkedin">Linkedin</div>
+                  </a>
+                  <a target="_blank" href="https://github.com/lucasdutra13">
+                    <div class="chip z-depth-1 hoverable">
+                      <img src="img/Github.png" alt="GitHub">GitHub</div>
+                  </a>
+                  <a target="_blank" href="mailto:dtrxxl@outlook.com">
+                    <div class="chip z-depth-1 hoverable">
+                      <img src="img/email.png" alt="E-mail">dtrxxl@outlook.com</div>
+                  </a>
+                  <a target="_blank" href="https://twitter.com/dutral_">
+                    <div class="chip z-depth-1 hoverable">
+                      <img src="img/twitter.png" alt="twitter">dutral_</div>
+                  </a>
+                </div>
+            </div>
+          </div>
+          <button class="btn-back">
+              <i class="small material-icons">arrow_back</i>
+          </button>
+        </div>
+      </section>
+      <section id="projects" class="displayNone section-projects">
+        <div class="container section-projects-container animated bounceInUp">
+          <button class="btn-back">
+            <i class="small material-icons">arrow_back</i>
+          </button>
+        </div>
+      </section>
     </div>
-  </section>
-  <section id="projects">
-    <div class="container">
-      <h1 class="project-tile">Teste</h1>
-      <a href="https://github.com/lucasdutra13/lucasdutra13.github.io" target="_blank">link to project</a>
-    </div>
-  </section>
+  </div>
+
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/trianglify/1.1.0/trianglify.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
     crossorigin="anonymous"></script>
-  <script src="js/script.js" type="text/javascript"></script>
-  <script src="https://unpkg.com/ityped@1.0.3"></script>
-  <script>
-    (function(){
-      'use strict';
-        $(document).ready(function () {
-          $('.parallax').parallax(); //parallax
-        });
-
-        ityped.init('#ityped', {
-          strings: ['Javascript (ES5, ES6, ES7)', ' NodeJS', 'SQL/NoSQL', 'Watson APIs', 'Linux', 'Open-source', 'to learn'],
-          startDelay: 1000,
-          loop: true
-        });
-
-        let aboutMe = document.querySelector('#href_about_me');
-        aboutMe.addEventListener('click', (e) => {
-          document.getElementById("about-me").scrollIntoView()
-          document.getElementById("about-me").scrollTop += 1000
-        });
-    }());
-  </script>
   <!--Import jQuery before materialize.js-->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+  <script src="https://unpkg.com/ityped@1.0.3"></script>
+  <script src="https://unpkg.com/github-api/dist/GitHub.min.js"></script>
+  <script src="js/script.js" type="text/javascript"></script>
 </body>
 
 </html>
