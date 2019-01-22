@@ -3,16 +3,17 @@
 }
 
 body {
-  background-image: linear-gradient(to right top, #dff1ff, #b0c7dc, #849dba, #5a7698, #335078);
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
   min-height: 100vh !important;
   min-width: 100vw !important;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+canvas {
+  position: absolute;
+  background-color: rgba(158, 179, 227, 1);
+  opacity: 0.9;
 }
 
 :root {
