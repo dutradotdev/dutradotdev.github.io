@@ -7,7 +7,7 @@
     const TOTAL_CIRCLES = 100;
     const arrayCircles = [];
     let circlesRunning = TOTAL_CIRCLES + 0;
-    const Circle =  function Circle(x, y, dx, dy) {
+    const Circle =  function Circle(x, y, dx, dy, mousemoved) {
       this.radius = Math.ceil((Math.random() + 0.3)* 30);
       this.half = 1;
       this.dx = dx;
@@ -19,7 +19,7 @@
       this.antiClockWise = false;
       this.maxTop = innerHeight -1;
       this.timer = 0;
-      this.alreadyStop = true;
+      this.alreadyStop = false;
       this.possibleColors = ['#D8DBE2', '#A9BCD0', '#58A4B0', '#373F51', '#DAA49A'];
       this.color = this.possibleColors[Math.round(Math.random() * this.possibleColors.length)];
       this.draw = function draw() {
@@ -31,9 +31,9 @@
       this.update = function update() {
         this.draw();
         if(this.y + this.radius >= this.maxTop) {
-          this.radius /= 2;
+          this.radius = Math.round(this.radius / 2);
           this.dy = -Math.round((this.dy / 2));
-          this.timer = setInterval(() => { this.dy += 0.8 }, 100);
+          this.timer = setInterval(() => { this.dy += 0.8 }, 75);
           if(this.dy === 0) {
             clearInterval(this.timer);
           }
@@ -42,8 +42,8 @@
         if(this.radius <= 1 && !this.alreadyStop) {
           circlesRunning--;
           this.alreadyStop = true;
+          this.radius =0;
         }
-
 
         this.y += this.dy;
       }
@@ -54,7 +54,9 @@
         $canvas.height = innerHeight;
         this.generateAllCircles();
         this.infinityAnimate();
-        window.addEventListener('mousemove', this.mouseMoveFn);
+        //window.addEventListener('mousemove', this.mouseMoveFn);
+      },
+      resizeCanvas: function resizeCanvas(height) {
       },
       infinityAnimate: function infinityAnimate() {
         if(!circlesRunning) {
@@ -69,17 +71,21 @@
       generateAllCircles: function generateAllCircles() {
         for(let i = 0; i < TOTAL_CIRCLES; i++) {
           let x = Math.round(Math.random() * innerWidth);
-          arrayCircles.push(new Circle(x, 0, 0, 5));
+          arrayCircles.push(new Circle(x, 0, 0, 5, false));
         }
       },
       mouseMoveFn: function mouseMoveFn(e) {
-        let circle = new Circle(e.x, e.y, 0, 5);
-        circlesRunning++;
-        arrayCircles.push(circle)
+        if(e.x % 7 === 0) {
+          let circle = new Circle(e.x, e.y, 0, 5, true);
+          circlesRunning++;
+          arrayCircles.push(circle);
+        }
+        return null;
       }
     };
   }());
 
   app.init();
+  win.resizeCanvas = app.resizeCanvas;
 
 }(document, window));

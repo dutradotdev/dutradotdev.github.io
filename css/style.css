@@ -8,12 +8,29 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+}
+
+.page-container {
+  z-index: 1;
+}
+
+button {
+  border: none;
 }
 
 canvas {
   position: absolute;
-  background-color: rgba(158, 179, 227, 1);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100% !important;
+  margin: 0 !important;
+  width: 100% !important;
   opacity: 0.9;
+  background-color: rgba(158, 179, 227, 1);
+  z-index: -1;
 }
 
 :root {
@@ -127,17 +144,26 @@ canvas {
 }
 
 button:not(.btn-back) {
-  background-color: #335078 !important;
-  border: none;
+  /* background-color: #335078 !important; */
+  background-color: transparent !important;
   color: #fff;
-  border-radius: 50px;
+  /* border-radius: 50px; */
   padding-left: 20px;
   padding-right: 20px;
   padding-top: 10px;
   padding-bottom: 10px;
   margin-right: 20px;
-  -webkit-box-shadow: 10px 10px 14px 1px rgba(00,00,00,0.2);
-  box-shadow: 10px 10px 14px 1px rgba(00,00,00,0.2);
+  /* -webkit-box-shadow: 10px 10px 14px 1px rgba(00,00,00,0.2); */
+  /* box-shadow: 10px 10px 14px 1px rgba(00,00,00,0.2); */
+  animation-name: fillbtn 3s forwards;
+  -webkit-animation: fillbtn 3s forwards;
+}
+
+@keyframes fillbtn {
+  25%  {border-left: 2px solid #DAA49A;}
+  50%  {border-bottom: 2px solid #DAA49A;}
+  75%  {border-right: 2px solid #DAA49A;}
+  100% {border: 2px solid #DAA49A;}
 }
 
 .btn-back {
@@ -212,7 +238,7 @@ strong {
 
 .section-projects-container > .btn-back {
   position: absolute;
-  top: -53px;
+  top: 20px;
 }
 
 .project-language-div {

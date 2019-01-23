@@ -42,10 +42,12 @@
       showWhoIAm: function showWhoIAm() {
         $previous = $containerSectionIntro;
         $sectionIntro.replaceChild($containerSectionAbout, $containerSectionIntro);
+        win.resizeCanvas($sectionAbout.offsetHeight);
       },
       showProjects: function showProjects() {
         $previous = $containerSectionIntro;
         $sectionIntro.replaceChild($containerSectionProjects, $containerSectionIntro);
+        win.resizeCanvas($sectionProjects.offsetHeight);
       },
       back: function back() {
         $sectionIntro.replaceChild($previous, $sectionIntro.firstElementChild);
@@ -56,7 +58,6 @@
         requestForRepositories.addEventListener('readystatechange', function() {
           if(requestForRepositories.status === 200 && requestForRepositories.readyState === 4) {
             const response = JSON.parse(requestForRepositories.response);
-            console.log(response)
             $containerSectionProjects.appendChild(app.createGithubProjects(response));
           }
         });
