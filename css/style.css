@@ -2,13 +2,16 @@
   font-family: 'Roboto';
 }
 
+h1 {
+  margin: 0;
+  padding: 0;
+  line-height: 50%;
+}
+
 body {
   min-height: 100vh !important;
   min-width: 100vw !important;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
 }
 
 .page-container {
@@ -29,7 +32,7 @@ canvas {
   margin: 0 !important;
   width: 100% !important;
   opacity: 0.9;
-  background-color: rgba(158, 179, 227, 1);
+  background-color: #D3EAE9;
   z-index: -1;
 }
 
@@ -38,25 +41,34 @@ canvas {
 }
 
 .section-intro {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.section-intro-container {
+  box-shadow: #675F5B 0px 1px 6px;
+  border-radius: 5px;
+  background-color: white;
+  width: 70%;
 }
 
 /*iTyped*/
 .ityped-cursor {
-    font-size: 2.2rem;
-    opacity: 1;
-    -webkit-animation: blink 0.3s infinite;
-    -moz-animation: blink 0.3s infinite;
-    animation: blink 0.3s infinite;
-    animation-direction: alternate;
+  font-size: 2.2rem;
+  opacity: 1;
+  -webkit-animation: blink 0.3s infinite;
+  -moz-animation: blink 0.3s infinite;
+  animation: blink 0.3s infinite;
+  animation-direction: alternate;
 }
 
 .index-text-ityped{
-    font-family: 'Roboto';
-    font-weight: 300;
-    font-size: 18px;
+  font-family: 'Roboto';
+  font-weight: 300;
+  font-size: 2.1rem;
+  color: #675F5B;
 }
 
 @keyframes blink {
@@ -78,15 +90,24 @@ canvas {
 }
 /*iTyped*/
 
-.index-text{
-    font-family: 'Roboto';
-    font-weight: 200;
+.index-text {
+  font-family: 'Roboto';
+  font-weight: 200;
+  font-size: 1.6rem;
+  color: #675F5B;
 }
 
+.index-text:hover, li:not(:first-child):hover {
+  text-decoration: none;
+  border-bottom: 1px solid #675F5B;
+}
+
+
+
 .menu-text{
-    font-family: 'Roboto';
-    font-weight: 300;
-    font-size: 20px;
+  font-family: 'Roboto';
+  font-weight: 300;
+  font-size: 20px;
 }
 
 .menu-text-logo{
@@ -98,33 +119,39 @@ canvas {
 }
 
 .my-desc {
-    z-index: 2;
+  padding: 30px;
+  display: inline-block;
 }
 
 .about{
-    padding-top: 5%;
-    background-color: #f1f2f6;
-    padding-bottom: 5%;
-    min-width: 100% !important;
-    width: 100vh !important;
+  padding-top: 5%;
+  background-color: #f1f2f6;
+  padding-bottom: 5%;
+  min-width: 100% !important;
+  width: 100vh !important;
 }
 
 .img-me{
-    border-radius: 9%;
-    margin-top: 25px;
-    width: 300px;
-    height: 300px;
+  display: inline-block;
+  padding-top: 30px;
+  width:90%;
+  height:100%;
+  transition: 1s;
+}
 
+.img-me:hover {
+  transition: 1s;
+  width:91%;
 }
 
 .about-me-text-box{
-    text-align: justify;
+  text-align: justify;
 }
 
 .about-me-text {
-    font-family: 'Roboto';
-    font-weight: 300;
-    font-size:20px;
+  font-family: 'Roboto';
+  font-weight: 300;
+  font-size:20px;
 }
 
 .buttons-options {
@@ -266,53 +293,24 @@ strong {
   border-radius: 50%;
 }
 
+.social-media-ul {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.social-media-ul > ul > li {
+  display: inline-block;
+  font-family: 'Roboto';
+  font-weight: 300;
+  font-size: 1.1rem;
+  color: #675F5B;
+}
+
+li > a {
+  text-decoration: none;
+  color: #675F5B;
+}
 
 @media(max-width: 838px) {
-  .my-box {
-    border: 3px solid var(--rosa);
-    margin: 20% 90px 0px 100px;
-    max-height: 300px;
-    height: 300px;
-    z-index: 1;
-    width: 350px;
-  }
-
-  .index-text:first-child {
-    font-size: 6rem !important;
-  }
-
-  .index-text {
-    font-size: 3rem !important;
-  }
-
-  h5 {
-    font-size: 2rem !important;
-  }
-
-  h5 > span {
-    font-size: 2rem !important;
-  }
-
-  .my-project {
-    border: 1px solid #d1d5da!important;
-    padding: 16px;
-    border-radius: 3px;
-    width: 28vh;
-    text-align: justify;
-
-  }
-
-  .project-language-div {
-    right: -45px;
-  }
-
-  .project-description {
-    font-size: 1.3rem !important;
-  }
-
-  .about-me-text {
-    font-weight: 300;
-    font-size: 21px;
-  }
-
 }

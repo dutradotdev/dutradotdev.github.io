@@ -39,10 +39,10 @@
           }
         }
 
-        if(this.radius <= 1 && !this.alreadyStop) {
+        if(this.radius <= 1.1 && !this.alreadyStop) {
           circlesRunning--;
           this.alreadyStop = true;
-          this.radius =0;
+          this.radius = 0;
         }
 
         this.y += this.dy;
@@ -54,7 +54,6 @@
         $canvas.height = innerHeight;
         this.generateAllCircles();
         this.infinityAnimate();
-        //window.addEventListener('mousemove', this.mouseMoveFn);
       },
       resizeCanvas: function resizeCanvas(height) {
       },

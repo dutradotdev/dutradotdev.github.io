@@ -17,26 +17,12 @@
     return {
       init: function init() {
         this.initItyped();
-        this.addEvtListeners();
-        this.getRepositories();
-      },
-      addEvtListeners: function addEvtListeners() {
-        win.addEventListener('load', this.slowlyLoad, false);
-        $btnWhoIAm.addEventListener('click', this.showWhoIAm, false);
-        $btnProjects.addEventListener('click', this.showProjects, false);
-        Array.from($btnBack)
-          .forEach(button => button.addEventListener('click', this.back, false));
       },
       initItyped: function initItyped() {
         ityped.init('#ityped', {
-          strings: ['Javascript (ES5, ES6, ES7)', ' NodeJS', 'SQL/NoSQL', 'Watson APIs', 'Linux', 'Open-source', 'to learn'],
+          strings: ['FullStack Developer', 'Investor', 'Javascript Enthusiast', 'Mobile Developer', 'Maker' ],
           startDelay: 1000,
           loop: true
-        });
-      },
-      slowlyLoad: function carregamentoSuave(){
-        $(doc).ready(() => {
-          $("body").fadeIn(1000);
         });
       },
       showWhoIAm: function showWhoIAm() {
