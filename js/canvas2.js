@@ -51,7 +51,11 @@
     return {
       init: function init() {
         $canvas.width = innerWidth;
-        $canvas.height = innerHeight;
+        var body = doc.body;
+        var html = doc.documentElement;
+        var height = Math.max( body.scrollHeight, body.offsetHeight,
+                       html.clientHeight, html.scrollHeight, html.offsetHeight );
+        $canvas.height =  height;
         this.generateAllCircles();
         this.infinityAnimate();
       },

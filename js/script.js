@@ -2,15 +2,13 @@
   'use strict';
 
   let app = (function appController(){
-    let $btnWhoIAm = doc.querySelector('.btn-who-i-am');
-    let $btnProjects = doc.querySelector('.btn-projects');
-    let $btnBack = doc.querySelectorAll('.btn-back');
     let $sectionIntro = doc.querySelector('.section-intro');
     let $sectionAbout = doc.querySelector('.section-about');
     let $sectionProjects = doc.querySelector('.section-projects');
     let $containerSectionIntro = doc.querySelector('.section-intro-container');
     let $containerSectionAbout = doc.querySelector('.section-about-container');
     let $containerSectionProjects = doc.querySelector('.section-projects-container');
+    let $canvas = doc.querySelector('canvas');
     let requestForRepositories = new XMLHttpRequest();
     let $previous = null;
 
@@ -20,7 +18,7 @@
       },
       initItyped: function initItyped() {
         ityped.init('#ityped', {
-          strings: ['FullStack Developer', 'Investor', 'Javascript Enthusiast', 'Mobile Developer', 'Maker' ],
+          strings: ['Javascript Enthusiast', 'Maker', 'Coffee Lover', 'Clean Coder' ],
           startDelay: 1000,
           loop: true
         });
